@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/index.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <div class="button">
+         <a href="/add">Add New Card</a>
+    </div>
+
+
+    <% for(author of authors)  {%>
+    
+    <div class="card-container">
+        <div class="card u-clearfix">
+            <div class="card-body">
+            <span class="card-number card-circle subtle">01</span>
+            <span class="card-author subtle"><%= author.name %></span>
+            <h2 class="card-title"><%=  author.title %></h2>
+            <span class="card-description subtle"><%= author.description %></span>
+            <div class="card-read">Read</div>
+            <a class="card-tag card-circle subtle" href="edit/<%= author.id %>"><i class="fa fa-edit"></i></a>
+            <a class="card-tag card-circle subtle" href="delete/<%= author.id %>"><i class="fa fa-trash"></i></a>
+            </div>
+            <img src="/<%= author.image %>" alt="" class="card-media" height="450px"/>
+        </div>
+        <div class="card-shadow"></div>
+        </div>
+
+    <% } %>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/addPage.css">
+</head>
+<body>
+  
+    <div id="section">
+
+        <section class="contact-wrap">
+          <form action="/update" method="POST" class="contact-form">
+            <input type="hidden" class="form-control" name="id" value="<%= author.id %>">
+            <div class="col-sm-6">
+              <div class="input-block">
+                <label for="">Name</label>
+                <input type="text" class="form-control" name="name" value="<%= author.name %>">
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="input-block">
+                <label for="">Title</label>
+                <input type="text" class="form-control" name="title" value="<%= author.title %>">
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <div class="input-block">
+                <input type="file" class="form-control" name="image" value="<%= author.image %>">
+              </div>
+            </div>
+
+            <div class="col-sm-12">
+              <div class="input-block textarea">
+                <label for="">Drop your message here</label>
+                <textarea rows="3" type="text" class="form-control" name="description" value="<%= author.description %>"></textarea>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <button class="square-button" type="submit">Send</button>
+            </div>
+          </form>
+        </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script src="/js/form.js"></script>
+
+</div>
+</body>
+</html>
